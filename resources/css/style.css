@@ -28,7 +28,6 @@ section {
 }
 
 a, li {
-    list-style: none;
     text-decoration: none;
     color: unset;
 }
@@ -43,7 +42,10 @@ header {
     min-height: 150px;
     text-transform: uppercase;
     color: #292929;
-    margin: 50px;
+    padding: 50px;
+    background-image: url(../img/cloud-background.jpeg);
+    background-size: cover;
+    background-position: bottom;
 }
 
 #name_title h1{
@@ -105,19 +107,20 @@ nav {
     background: #A1BEDB;
 }
 
-ul {
+nav ul {
     width: 80%;
     margin: 0 auto;
     padding: 0;
 }
 
-ul li {
+nav ul li {
     display: inline-block;
+    list-style: none;
     color: white;
     padding: 20px;
 }
 
-ul li:hover {
+nav ul li:hover {
     background-color: #79a8d8;
 }
 
@@ -137,11 +140,11 @@ ul li:hover {
     .toggle {
         display: block;
     }
-    ul {
+    nav ul {
         width: 100%;
         display: none;
     }
-    ul li {
+    nav ul li {
         display: block;
         text-align: center;
     }
@@ -202,6 +205,22 @@ ul li:hover {
     margin: 100px 50px;
 }
 
+@media (max-width: 767px) {
+    .main_with_side_bar {
+        flex-wrap: wrap;
+    }
+    #main_bar {
+        width: 100%;
+        margin: 100px 50px;
+    }
+    
+    #side_bar {
+        width: 1000%;
+        margin: 100px 50px;
+    }
+    
+}
+
 #side_bar img {
     width: 100%;
 }
@@ -214,16 +233,51 @@ ul li:hover {
     margin: 0 auto;
 }
 
+@media (max-width: 767px) {
+
+    .main_no_sidebar section div {
+        width: 100%;
+    }
+
+    .main_no_sidebar img {
+        width: 100%;
+    }
+}
+
 #quote {
     font-style: italic;
-    font-weight: 200;
+    color: #8DA467;
 }
 
 #alert {
-    background-color: khaki;
+    background-color: rgb(240, 213, 140);
     padding: 3em;
     max-width: 100%;
     text-align: center;
+}
+
+.focus_points {
+    display: flex;
+    justify-content: space-around;
+}
+
+.focus_points ul {
+    list-style: none;
+}
+
+.focus_points li {
+    padding: .5vw;
+}
+
+.focus_points i {
+    color: #6a7c4d;
+}
+
+@media (max-width: 767px) {
+    .focus_points {
+        flex-wrap: wrap;
+        justify-content: left;
+    }
 }
 
 /* ------ Products ----- */
@@ -399,4 +453,10 @@ footer p, td {
     text-align: center;
     background-color: #A1BEDB;
     color: #79a8d8;
+}
+
+@media (max-width: 767px) {
+    footer {
+        flex-wrap: wrap;
+    }
 }
